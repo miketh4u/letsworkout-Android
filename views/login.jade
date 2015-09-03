@@ -1,0 +1,24 @@
+extends base
+
+block vars
+ -var title='Login'
+
+block body
+ h1(style='background-color: #84264D; color:#FFD700') Let's Workout.
+ h2 Log into your Account
+
+ if error
+   P ERROR: #{error}
+
+ form(method="post")
+   input(type='hidden', name='_csrf', value=csrfToken)
+   
+   span username:
+   input(type="text", name="username", required=true)
+   br   
+
+   span Password:
+   input(type="password", name="password", required=true)
+   br
+
+   input(type="submit" name="submit" value="submit" style='background-color: #87ac5a; color: white')                     

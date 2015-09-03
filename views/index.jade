@@ -1,0 +1,25 @@
+extends base
+
+block vars
+  -var title ='home'
+
+block body
+  h1(style='background-color: #84264D; color:#FFD700') Let's Workout.
+   
+  button.btn#green(Onclick='something()' style='background-color: #87ac5a; color: white') Login
+    
+  button.btn#green(Onclick='something2()' style='background-color: #87ac5a; color:white') Register
+
+  button.btn#blue(onclick='facebook()' style='background-color: #3B5998; color:white') Login with Facebook
+  
+
+  script.
+      var something = function() {
+      window.location.href='/login'
+      }
+      var something2 = function() {
+      window.location.href='/register'
+      }
+      var facebook= function() {
+      window.location.href='/auth/facebook'
+      } 
